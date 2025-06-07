@@ -1,0 +1,114 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fcfcfc;
+  color: #333;
+  padding-top: 50px;
+}
+
+h1 {
+  color: #4caf50;
+  margin-bottom: 40px;
+}
+
+.rating-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.stars {
+  font-size: 2.5em;
+  color: #ddd; /* デフォルトの星の色 */
+  margin-bottom: 20px;
+}
+
+.stars i {
+  cursor: pointer;
+  margin: 0 5px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* マウスオーバー時または評価された星の色 */
+.stars i.hovered,
+.stars i.selected {
+  color: #ffc107; /* 金色 */
+  transform: scale(1.1); /* 少し拡大 */
+}
+
+/* 評価が確定した後の星のスタイル */
+.stars.rated i {
+  cursor: default; /* クリック不可に */
+}
+
+.rating-container p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+#currentRating {
+  font-weight: bold;
+  color: #4caf50;
+}
+/*=====================================================
+
+Box
+
+=====================================================*/
+.box {
+  width: 720px;
+  height: 480px;
+  margin: 13% auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+  transition: 0.4s;
+}
+.box::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  transition: 0.4s;
+  transition-delay: 0.5s;
+}
+.box::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  transition: 0.4s;
+  transition-delay: 0.5s;
+}
+.box:hover:before,
+.box:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: rgba(255, 255, 255, 0.3);
+  transition-delay: 0s;
+}
+.box:hover {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  transition-delay: 0.3s;
+}
