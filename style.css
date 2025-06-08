@@ -9,7 +9,11 @@ body {
   color: #333;
   padding-top: 50px;
 }
+/*=====================================================
 
+Rating
+
+=====================================================*/
 .rating-container {
   background-color: #ffffff;
   padding: 40px;
@@ -101,9 +105,11 @@ Box
   height: 100%;
   border-color: rgba(255, 255, 255, 0.3);
   transition-delay: 0s;
+  border-radius: 10px;
 }
 .box:hover {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   transition-delay: 0.3s;
+  border-radius: 10px;
 }
